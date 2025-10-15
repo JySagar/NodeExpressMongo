@@ -19,13 +19,14 @@ const server0 = httpMod.createServer((req, res) => {
     res.write("<body><h1>Checkout our products</h1></body>");
     res.write("</html>");
     return res.end();
+  } else {
+    res.setHeader("Content-Type", "text/html");
+    res.write("<html>");
+    res.write("<head><title>Complete Coding</title></head>");
+    res.write("<body><h1>This is JySagar</h1></body>");
+    res.write("</html>");
+    return res.end();
   }
-  res.setHeader("Content-Type", "text/html");
-  res.write("<html>");
-  res.write("<head><title>Complete Coding</title></head>");
-  res.write("<body><h1>This is JySagar</h1></body>");
-  res.write("</html>");
-  return res.end();
 });
 
 const port0 = 3000;
