@@ -34,6 +34,7 @@ const server0 = httpMod.createServer((req, res) => {
   } else if (
     req.url.toLowerCase() === "/submit-details" &&
     req.method == "POST"
+    // The above two lines meant when we click submit on the form then the form action will take us to submit-details and the method was given as post so the above two lines means that when this happens then execute the below part where we also set the header to redirect us to a location i.e. / i.e. home. so here status code we set as 302 as it means redirect.
   ) {
     fsMod.writeFileSync("user.txt", "Hard coded data");
     res.statusCode = 302;
